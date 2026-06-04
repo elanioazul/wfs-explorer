@@ -1,9 +1,9 @@
 "use client"
 
 import { createContext, useContext, useState, type ReactNode } from "react"
-import { type TranslationKey, enTranslations, deTranslations } from "@/lib/translations"
+import { type TranslationKey, enTranslations, spTranslations } from "@/lib/translations"
 
-type Language = "en" | "de"
+type Language = "en" | "sp"
 
 interface LanguageContextType {
   language: Language
@@ -20,9 +20,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       // Get browser language (e.g., 'en-US', 'de-DE', etc.)
       const browserLang = navigator.language.toLowerCase()
 
-      // Check if the browser language starts with 'de' for German
-      if (browserLang.startsWith("de")) {
-        return "de"
+      // Check if the browser language starts with 'es' for Spanish
+      if (browserLang.startsWith("es")) {
+        return "sp"
       }
     }
 
@@ -31,7 +31,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   })
 
   const t = (key: TranslationKey): string => {
-    const translations = language === "en" ? enTranslations : deTranslations
+    const translations = language === "en" ? enTranslations : spTranslations
     return translations[key] || key // Fallback to key if translation is missing
   }
 
