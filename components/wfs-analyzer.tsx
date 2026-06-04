@@ -1884,12 +1884,12 @@ export default function WfsAnalyzer() {
                   <p className="text-sm mb-2">
                     {t("exampleDatasetsDescription")}{" "}
                     <a
-                      href="https://geoexplorer.odis-berlin.de/"
+                      href="https://geoserver.cyberdefense.indra.es/geoserver/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-odis-light"
                     >
-                      GeoExplorer
+                      GeoServer
                     </a>
                     {"."}
                   </p>

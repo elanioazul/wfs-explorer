@@ -107,14 +107,14 @@ export type TranslationKey =
   | "exampleDatasets"
   | "exampleDatasetsDescription"
   | "ausprobieren"
-  | "berlinCemeteries"
-  | "berlinCemeteriesDesc"
-  | "berlinBlocks"
-  | "berlinBlocksDesc"
-  | "berlinHikingTrails"
-  | "berlinHikingTrailsDesc"
-  | "berlinEnergy"
-  | "berlinEnergyDesc"
+  | "asturiasHealthSystem"
+  | "asturiasHealthSystemDesc"
+  | "spainAgroRegion"
+  | "spainAgroRegionDesc"
+  | "madridTransport"
+  | "madridTransportDesc"
+  | "cataloniaAdminDivision"
+  | "cataloniaAdminDivisionDesc"
   | "filter"
   | "features"
   | "of"
@@ -391,17 +391,17 @@ export const enTranslations: Record<TranslationKey, string> = {
   false: "False",
   missingValues: "Missing Values",
   exampleDatasets: "Example services",
-  exampleDatasetsDescription: "Find more WFS services from Berlin using the ",
+  exampleDatasetsDescription: "Find more WFS services from Ciberdefense BU using the ",
   ausprobieren: ".",
-  berlinCemeteries: "Berlin Cemeteries",
-  berlinCemeteriesDesc: "Cemetery locations and information in Berlin",
-  berlinBlocks: "Berlin Blocks",
-  berlinBlocksDesc: "Urban blocks and statistical areas in Berlin",
-  berlinHikingTrails: "Berlin Hiking Trails",
-  berlinHikingTrailsDesc: "Hiking and walking trails in Berlin",
-  berlinEnergyDesc:
-    "Energy consumption data at postcode, block and district level",
-  berlinEnergy: "Energy consumption in Berlin",
+  asturiasHealthSystem: "Health Map of the Principality of Asturias",
+  asturiasHealthSystemDesc: "Health Areas and Zoning in Asturias",
+  spainAgroRegion: "Agricultural regions of Spain",
+  spainAgroRegionDesc: "Agricultural regions and statistical areas in Spain",
+  madridTransport: "Madrid Transport",
+  madridTransportDesc: "Road and rail networks with their corresponding infrastructure",
+  cataloniaAdminDivisionDesc:
+    "Catalonia admin divisions, municipalities, districts...",
+  cataloniaAdminDivision: "Catalonia admin divisions",
   filter: "Filter",
   features: "features",
   of: "of",
@@ -701,17 +701,17 @@ export const spTranslations: Record<TranslationKey, string> = {
   false: "Falso",
   missingValues: "Valores faltantes",
   exampleDatasets: "Servicios de ejemplo",
-  exampleDatasetsDescription: "Encuentra más servicios WFS de Berlín con el ",
+  exampleDatasetsDescription: "Encuentra más servicios WFS de la BU Ciberdefensa con el ",
   ausprobieren: ".",
-  berlinCemeteries: "Cementerios de Berlín",
-  berlinCemeteriesDesc: "Ubicaciones e información de cementerios en Berlín",
-  berlinBlocks: "Manzanas de Berlín",
-  berlinBlocksDesc: "Manzanas urbanas y áreas estadísticas en Berlín",
-  berlinHikingTrails: "Senderos de Berlín",
-  berlinHikingTrailsDesc: "Senderos para caminar y hacer excursiones en Berlín",
-  berlinEnergyDesc:
-    "Datos de consumo de energía por código postal, manzana y distrito",
-  berlinEnergy: "Consumo de energía en Berlín",
+  asturiasHealthSystem: "Mapa Sanitario del Principado de Asturias.",
+  asturiasHealthSystemDesc: "Áreas de Salud y Zonificación en Asturias",
+  spainAgroRegion: "Comarcas agrarias de España",
+  spainAgroRegionDesc: "Comarcas agrarias y áreas estadísticas en España",
+  madridTransport: "Transporte de Madrid",
+  madridTransportDesc: "Redes de carreteras y ferrocarril con sus Correspondientes infraestructuras",
+  cataloniaAdminDivisionDesc:
+    "División administratica de la CCAA de Cataluña",
+  cataloniaAdminDivision: "Division administrativa de Cataluña",
   filter: "Filtro",
   features: "features",
   of: "de",

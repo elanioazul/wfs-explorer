@@ -21,27 +21,27 @@ export function ExampleDatasets({ onSelectDataset }: ExampleDatasetsProps) {
 
   const exampleDatasets: ExampleDataset[] = [
     {
-      nameKey: "berlinCemeteries",
-      url: "https://gdi.berlin.de/services/wms/friedhofsbestand",
-      descriptionKey: "berlinCemeteriesDesc",
+      nameKey: "asturiasHealthSystem",
+      url: "https://sig.asturias.es/servicios/services/Sanidad/Areas_Sanitarias/MapServer/WFSServer?request=GetCapabilities&service=WFS",
+      descriptionKey: "asturiasHealthSystemDesc",
       icon: <Database className="h-4 w-4" />
     },
     {
-      nameKey: "berlinBlocks",
-      url: "https://gdi.berlin.de/services/wfs/bloecke",
-      descriptionKey: "berlinBlocksDesc",
+      nameKey: "spainAgroRegion",
+      url: "https://wmts.mapama.gob.es/sig/wfs_comun/Comarcas_Agrarias/wfs",
+      descriptionKey: "spainAgroRegionDesc",
       icon: <Map className="h-4 w-4" />
     },
     {
-      nameKey: "berlinHikingTrails",
-      url: "https://gdi.berlin.de/services/wfs/gruene_wege",
-      descriptionKey: "berlinHikingTrailsDesc",
+      nameKey: "madridTransport",
+      url: "https://idem.comunidad.madrid/geoidem/RedesTransporte/wfs?REQUEST=GetCapabilities&Service=WFS&VERSION=1.1.0",
+      descriptionKey: "madridTransportDesc",
       icon: <Route className="h-4 w-4" />
     },
     {
-      nameKey: "berlinEnergy",
-      url: "https://gdi.berlin.de/services/wfs/ua_stromverbrauch",
-      descriptionKey: "berlinEnergyDesc",
+      nameKey: "cataloniaAdminDivision",
+      url: "https://geoserveis.icgc.cat/servei/catalunya/divisions-administratives/wfs",
+      descriptionKey: "cataloniaAdminDivisionDesc",
       icon: <Route className="h-4 w-4" />
     }
   ];
