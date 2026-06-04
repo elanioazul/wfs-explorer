@@ -29,10 +29,10 @@ export function LanguageSwitcher() {
           {t("english")}
         </DropdownMenuItem>
         <DropdownMenuItem
-          onClick={() => setLanguage("de")}
-          className={language === "de" ? "bg-muted" : ""}
+          onClick={() => setLanguage("sp")}
+          className={language === "sp" ? "bg-muted" : ""}
         >
-          {t("german")}
+          {t("spanish")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
