@@ -107,8 +107,8 @@ export type TranslationKey =
   | "exampleDatasets"
   | "exampleDatasetsDescription"
   | "ausprobieren"
-  | "asturiasHealthSystem"
-  | "asturiasHealthSystemDesc"
+  | "cantabriaEnergy"
+  | "cantabriaEnergyDesc"
   | "spainAgroRegion"
   | "spainAgroRegionDesc"
   | "madridTransport"
@@ -393,8 +393,8 @@ export const enTranslations: Record<TranslationKey, string> = {
   exampleDatasets: "Example services",
   exampleDatasetsDescription: "Find more WFS services from Ciberdefense BU using the ",
   ausprobieren: ".",
-  asturiasHealthSystem: "Health Map of the Principality of Asturias",
-  asturiasHealthSystemDesc: "Health Areas and Zoning in Asturias",
+  cantabriaEnergy: "Cantabria Energy",
+  cantabriaEnergyDesc: "IDE Cantabria Energy layers.",
   spainAgroRegion: "Agricultural regions of Spain",
   spainAgroRegionDesc: "Agricultural regions and statistical areas in Spain",
   madridTransport: "Madrid Transport",
@@ -703,8 +703,8 @@ export const spTranslations: Record<TranslationKey, string> = {
   exampleDatasets: "Servicios de ejemplo",
   exampleDatasetsDescription: "Encuentra más servicios WFS de la BU Ciberdefensa con el ",
   ausprobieren: ".",
-  asturiasHealthSystem: "Mapa Sanitario del Principado de Asturias.",
-  asturiasHealthSystemDesc: "Áreas de Salud y Zonificación en Asturias",
+  cantabriaEnergy: "Cantabría energia.",
+  cantabriaEnergyDesc: "Capas de energía de la IDE Cantabría.",
   spainAgroRegion: "Comarcas agrarias de España",
   spainAgroRegionDesc: "Comarcas agrarias y áreas estadísticas en España",
   madridTransport: "Transporte de Madrid",

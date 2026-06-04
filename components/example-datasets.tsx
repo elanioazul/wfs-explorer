@@ -21,9 +21,9 @@ export function ExampleDatasets({ onSelectDataset }: ExampleDatasetsProps) {
 
   const exampleDatasets: ExampleDataset[] = [
     {
-      nameKey: "asturiasHealthSystem",
-      url: "https://sig.asturias.es/servicios/services/Sanidad/Areas_Sanitarias/MapServer/WFSServer?request=GetCapabilities&service=WFS",
-      descriptionKey: "asturiasHealthSystemDesc",
+      nameKey: "cantabriaEnergy",
+      url: "https://geoservicios.cantabria.es/inspire/services/Energia/MapServer/WFSServer",
+      descriptionKey: "cantabriaEnergyDesc",
       icon: <Database className="h-4 w-4" />
     },
     {
