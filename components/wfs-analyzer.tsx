@@ -1536,9 +1536,9 @@ export default function WfsAnalyzer() {
               <p className="text-sm text-gray-600 font-light">{t("appSubtitle")}</p>
             </div> */}
 
-            <a href="https://odis-berlin.de/" target="_blank">
+            <a href="https://defence.indragroup.com/es/segmentos/cyberdefence" target="_blank">
               <img
-                src={"/logo-odis.svg"}
+                src={"/Logo_Header.png"}
                 width="200"
                 height="100"
                 alt="Odis logo"
