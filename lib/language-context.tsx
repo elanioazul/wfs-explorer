@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState, type ReactNode } from "react"
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react"
 import { type TranslationKey, enTranslations, spTranslations } from "@/lib/translations"
 
 type Language = "en" | "sp"
@@ -14,28 +14,27 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => {
-    // Only run on client side
-    if (typeof window !== "undefined") {
-      // Get browser language (e.g., 'en-US', 'de-DE', etc.)
-      const browserLang = navigator.language.toLowerCase()
+  // 1. Always initialize to a static default to match the server output
+  const [language, setLanguage] = useState<Language>("en")
 
-      // Check if the browser language starts with 'es' for Spanish
-      if (browserLang.startsWith("es")) {
-        return "sp"
-      }
+  // 2. Safely perform client-only detection after the page has successfully hydrated
+  useEffect(() => {
+    const browserLang = navigator.language.toLowerCase()
+    if (browserLang.startsWith("es")) {
+      setLanguage("sp")
     }
-
-    // Default to English
-    return "en"
-  })
+  }, [])
 
   const t = (key: TranslationKey): string => {
     const translations = language === "en" ? enTranslations : spTranslations
-    return translations[key] || key // Fallback to key if translation is missing
+    return translations[key] || key
   }
 
-  return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  )
 }
 
 export function useLanguage() {
