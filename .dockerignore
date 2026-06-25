@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.gitignore
+.vscode
+__tests__
+*.md
+.DS_Store
+*.log
+Dockerfile
+docker-compose.yml
+.dockerignore
