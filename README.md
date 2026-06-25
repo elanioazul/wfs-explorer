@@ -1,11 +1,3 @@
-![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 # WFS-Explorer
 
 One of the most important sources for (open) geospatial data is the Web Feature Service (WFS). WFS provides geographic features—such as points, lines, or polygons — along with associated attribute data in a standardized way over the internet. It enables precise, up-to-date, and machine-readable information to be retrieved.
@@ -40,47 +32,23 @@ With the WFS Explorer, users can interactively explore individual WFS datasets. 
 
 The WFS Explorer can be preconfigured via URL parameters. This makes it easy to open a specific dataset directly, apply predefined filters, or provide a list of datasets for search and selection. When a WFS dataset is loaded and filters are applied in the interface, the corresponding URL parameters are set automatically.
 
-### Parameters
-
-- `wfs`  
-  The URL of the WFS service that should be loaded automatically.
-
-- `filters`  
-  A URL-encoded JSON array of filter objects that should be applied when the dataset is loaded.  
-  Each filter object contains:
-  - `attribute`: the field name
-  - `operator`: the comparison operator
-  - `value`: the filter value
-
-- `bbox`  
-  A bounding box filter in the format `minx,miny,maxx,maxy` (WGS84 coordinates). When provided, only features within this geographic area are loaded.  
-  Example: `bbox=13.3,52.4,13.5,52.6`
-
-- `datasets`  
-  The URL to a `services-internet.json` file, as used by the [Masterportal](https://bitbucket.org/geowerkstatt-hamburg/masterportal/src) software. All datasets listed in this JSON file are added to the search. If an entry is a WMS, the application also checks whether a corresponding WFS is available. Example which loads the services from Berlins Masterportal:
-  - https://wfsexplorer.odis-berlin.de/?datasets=https://gdi.berlin.de/viewer/_shared/resources/services-internet.json
-
 ### About Web Feature Service (WFS)
 
 The WFS Explorer is built on the Web Feature Service (WFS) standard, defined by the Open Geospatial Consortium (OGC). WFS provides geospatial data in a structured, machine-readable format—including both geometry (e.g., points, lines, polygons) and corresponding attribute data. What makes this format particularly powerful is its standardized API: regardless of the data provider, WFS endpoints follow a consistent protocol and can thus be queried in a uniform way.
 
 The WFS Explorer leverages this interface, using key operations such as GetCapabilities, DescribeFeatureType, and GetFeature to automatically retrieve structured information from WFS services. This includes available layers, data structures (attribute names and types), and the actual geospatial data. Important metadata such as projection info, licensing terms, or contact details can also be extracted systematically.
 
-## Code
-
-Please notes that this project first draft was originally written by AI and then developed further. This may have resulted in some redundant code.
-
 ## Prerequisites
 
 - Node.js
 - npm
 
-### Installation
+### Local installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/wfs-data-analyzer-tool.git
+   git clone https://wherever.git
    cd odis-wfsexplorer
    ```
 
@@ -98,34 +66,20 @@ Please notes that this project first draft was originally written by AI and then
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## Contributing
+### Docker installation
 
-Before you create a pull request, write an issue so we can discuss your changes.
+- Build the image and run it:
 
-## Contributors
+  1. docker build -t wfs-explorer .
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+  2. docker run --name wfs-explorer -p 3000:3000 wfs-explorer
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://hanshack.com/"><img src="https://avatars.githubusercontent.com/u/8025164?v=4?s=64" width="64px;" alt="Hans Hack"/><br /><sub><b>Hans Hack</b></sub></a><br /><a href="https://github.com/technologiestiftung/odis-geoexplorer/commits?author=hanshack" title="Code">💻</a> <a href="#content-hanshack" title="Content">🖋</a> <a href="#data-hanshack" title="Data">🔣</a> <a href="https://github.com/technologiestiftung/odis-geoexplorer/commits?author=hanshack" title="Documentation">📖</a> <a href="#projectManagement-hanshack" title="Project Management">📆</a></td>
-            <td align="center" valign="top" width="14.28%"><a href="https://github.com/Lisa-Stubert"><img src="https://avatars.githubusercontent.com/u/61182572?v=4?s=64" width="64px;" alt="Lisa-Stubert"/><br /><sub><b>Lisa-Stubert</b></sub></a><br /><a href="#review-Lisa-Stubert" title="Review">👀</a> <a href="#projectManagement-Lisa-Stubert" title="Project Management">📆</a></td>
-            <td align="center" valign="top" width="14.28%"><a href="https://github.com/KlemensM"><img src="https://avatars.githubusercontent.com/u/98896505?v=4?s=64" width="64px;" alt="Klemens"/><br /><sub><b>Klemens</b></sub></a><br /><a href="#content-KlemensM" title="Content">🖋</a> <a href="#projectManagement-KlemensM" title="Project Management">📆</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://fhp.incom.org/profile/9200/projects"><img src="https://avatars.githubusercontent.com/u/46717848?v=4?s=64" width="64px;" alt="anna"/><br /><sub><b>anna</b></sub></a><br /><a href="#review-annameide" title="Review">👀</a></td>
-    </tr>
-  </tbody>
-</table>
+  3. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
+- Docker compose file:
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+  1. docker compose up -d
+  2. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
 ## Content Licensing
 
@@ -165,7 +119,3 @@ Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3
     </td>
   </tr>
 </table>
-
-## Related Projects
-
-[GeoExplorer](https://geoexplorer.odis-berlin.de/)
